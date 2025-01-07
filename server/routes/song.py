@@ -1,5 +1,7 @@
+import os
 import uuid
 import cloudinary
+from dotenv import load_dotenv
 from fastapi import APIRouter, Depends, File, Form, UploadFile
 from sqlalchemy.orm import Session
 from database import get_db
@@ -8,13 +10,16 @@ import cloudinary.uploader
 
 from models.song import Song
 
+load_dotenv()
+
+api_secret = os.getenv("CLOUDINARY_API_KEY")
 
 router = APIRouter()
 
 cloudinary.config( 
     cloud_name = "dlsfr0ha6", 
     api_key = "142348264529635", 
-    api_secret = "X7YKPkRdtnWF7M8pRf1wwthtxY8", # Click 'View API Keys' above to copy your API secret
+    api_secret = api_secret, # Click 'View API Keys' above to copy your API secret
     secure=True
 )
 
