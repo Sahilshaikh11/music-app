@@ -10,4 +10,4 @@ class Song(Base):
     thumbnail_url = Column(TEXT)
     artist = Column(TEXT)
     song_name = Column(VARCHAR(100))
-    hex_code = Column(VARCHAR(8))
+    hex_code = Column(VARCHAR(6))
