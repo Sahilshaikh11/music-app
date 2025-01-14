@@ -1,5 +1,6 @@
 class ServerConstant {
-  static String serverUrl = 'http://192.168.34.63:8000';
+  // static String serverUrl = 'http://192.168.34.63:8000';
+  static String serverUrl = 'https://music-app-backend-3u5v.onrender.com';
 }
 
 
